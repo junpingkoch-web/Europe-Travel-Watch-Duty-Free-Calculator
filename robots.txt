@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://junpingkoch-web.github.io/Europe-Travel-Watch-Duty-Free-Calculator/sitemap.xml

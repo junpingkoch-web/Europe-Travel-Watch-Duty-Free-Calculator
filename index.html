@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>欧洲旅行手表免税计算器 · Europe Watch Tax-Free Calculator · Uhren-Steuerfrei-Rechner</title>
+<meta name="description" content="法国、意大利、德国、瑞士、西班牙购表退税估算工具：输入标价自动算出退税后到手价，并可与本国零售价对比，估算此行实际省了多少 — 中文/English/Deutsch。Estimate your Europe watch duty-free refund and compare it with the home-country retail price. Berechne deine Mehrwertsteuer-Erstattung beim Uhrenkauf in Europa.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://junpingkoch-web.github.io/Europe-Travel-Watch-Duty-Free-Calculator/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%8C%9A%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<!-- Google AdSense: replace data-ad-client below with your real ca-pub-XXXX ID once your site is approved. -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="18" y="4" width="12" height="7" rx="2" stroke="var(--accent-gold)" stroke-width="2"/>
+        <rect x="18" y="37" width="12" height="7" rx="2" stroke="var(--accent-gold)" stroke-width="2"/>
+        <circle cx="24" cy="24" r="15" stroke="var(--accent-gold)" stroke-width="2"/>
+        <path d="M24 16V24L29 28" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div id="titleWrap" class="title-wrap">
+        <p class="kicker" id="txt-kicker">EUROPE · WATCH PURCHASE</p>
+        <h1 id="txt-title">Europe Travel Watch Duty-Free Calculator</h1>
+      </div>
+    </div>
+    <div class="top-right">
+      <p class="top-note" id="txt-topnote">Estimated from each country's official VAT rate.</p>
+      <div class="lang-switch" role="group" aria-label="Language / 语言 / Sprache">
+        <button type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="de">DE</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="ad-slot ad-slot--banner ad-slot--top">
+    <span id="txt-ad-top">ADVERTISEMENT</span>
+    <!-- Replace with your real unit once approved:
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+
+  <div class="card">
+    <div class="ticket-grid">
+      <div class="panel">
+        <h2 id="txt-leftTitle">Purchase Details</h2>
+        <p class="sub" id="txt-leftSub">Pick the country of purchase.</p>
+
+        <div class="field">
+          <label for="country" id="txt-labelCountry">Country of purchase</label>
+          <select id="country"></select>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="vatRate" id="txt-labelVat">VAT rate</label>
+            <div class="unit-suffix"><input id="vatRate" type="number" step="0.1" value="20"><span>%</span></div>
+          </div>
+          <div class="field">
+            <label for="refundRate" id="txt-labelRefund">Estimated cash-refund rate</label>
+            <div class="unit-suffix"><input id="refundRate" type="number" step="0.1" value="12"><span>%</span></div>
+          </div>
+        </div>
+        <p class="hint" id="thresholdHint">Minimum refund threshold</p>
+
+        <div class="field">
+          <label for="price" id="txt-labelPrice">Watch tag price (VAT included)</label>
+          <div class="unit-suffix">
+            <input id="price" type="number" step="1" value="8500">
+            <span id="currencyLabel">EUR</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="perforation-v"></div>
+      <div class="perforation-h"></div>
+
+      <div class="panel">
+        <h2 id="txt-rightTitle">Refund Result</h2>
+        <p class="sub" id="txt-rightSub">Net cost after customs stamp and refund.</p>
+
+        <div class="result-hero">
+          <div class="gauge">
+            <svg viewBox="0 0 100 100" width="92" height="92">
+              <circle class="gauge-track" cx="50" cy="50" r="42" />
+              <circle class="gauge-value" id="gaugeValue" cx="50" cy="50" r="42" stroke-dasharray="0 264" />
+            </svg>
+            <div class="gauge-label">
+              <b id="gaugePct">0%</b>
+              <span id="txt-gaugeCaption">Saved</span>
+            </div>
+          </div>
+          <div class="result-hero-text">
+            <div class="label" id="txt-netLabel">Net price after refund</div>
+            <div class="value" id="netPrice">—</div>
+          </div>
+        </div>
+
+        <div class="line-item">
+          <span class="li-label" id="txt-liTag">Tag price (incl. VAT)</span>
+          <span class="li-value" id="outTag">—</span>
+        </div>
+        <div class="line-item">
+          <span class="li-label" id="txt-liVat">VAT included</span>
+          <span class="li-value" id="outVat">—</span>
+        </div>
+        <div class="line-item total">
+          <span class="li-label" id="txt-liRefund">Estimated cash refund</span>
+          <span class="li-value" id="outRefund">—</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ad-slot ad-slot--incontent">
+      <span id="txt-ad-in">ADVERTISEMENT</span>
+      <!-- Replace with your real unit once approved:
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      -->
+    </div>
+
+    <div class="below">
+      <h2 id="txt-belowTitle">Compare with Home-Country Price</h2>
+      <p class="sub" id="txt-belowSub">See how much this trip actually saves.</p>
+
+      <div class="compare-grid">
+        <div class="field">
+          <label for="homePrice" id="txt-labelHomePrice">Home retail price</label>
+          <div class="unit-suffix">
+            <input id="homePrice" type="number" step="1">
+            <input id="homeCurrency" class="currency-input" type="text" maxlength="6" value="USD">
+          </div>
+        </div>
+        <div class="field">
+          <label for="fxRate" id="txt-labelFx">Exchange rate</label>
+          <input id="fxRate" type="number" step="0.0001">
+          <p class="hint" id="txt-fxHint">Enter today's live rate manually.</p>
+        </div>
+      </div>
+
+      <div class="compare-result" id="compareResult">
+        <div class="compare-banner" id="compareBanner">
+          <span class="cb-text" id="compareText">—</span>
+        </div>
+      </div>
+
+      <details class="customs">
+        <summary><span class="chev">▶</span> <span id="txt-customsSummary">Home-country customs reminder</span></summary>
+        <div class="customs-body">
+          <p id="txt-customsIntro">Most countries grant travelers a duty-free allowance.</p>
+          <div class="field-row">
+            <div class="field">
+              <label for="dutyFreeAllowance" id="txt-labelAllowance">Personal duty-free allowance</label>
+              <div class="unit-suffix"><input id="dutyFreeAllowance" type="number" step="10"><span class="dyn-currency">USD</span></div>
+            </div>
+            <div class="field">
+              <label for="dutyRate" id="txt-labelDutyRate">Duty rate above allowance</label>
+              <div class="unit-suffix"><input id="dutyRate" type="number" step="1"><span>%</span></div>
+            </div>
+          </div>
+          <div class="customs-out" id="customsOut"></div>
+          <div class="customs-note" id="txt-customsNote">This is a rough estimate only, not tax advice.</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="ad-slot ad-slot--banner ad-slot--bottom">
+    <span id="txt-ad-bottom">ADVERTISEMENT</span>
+    <!-- Replace with your real unit once approved:
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+
+  <footer>
+    <span id="txt-footer1">Refund share varies by category, operator fee, and payment method.</span><br>
+    <span id="txt-footer2">For trip-budgeting reference only — not tax or legal advice.</span>
+  </footer>
+</div>
+
+<a class="bmc-button" href="https://www.buymeacoffee.com/junping.koch" target="_blank" rel="noopener noreferrer" aria-label="Buy me a coffee">
+  <span class="bmc-icon" aria-hidden="true">☕</span>
+  <span class="bmc-text">Buy me a coffee</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
