@@ -60,7 +60,20 @@
       compareCheaper: function (net, amt, pct) { return "换算约 " + net + "，比本国零售价省 <b>" + amt + "（" + pct + "%）</b>"; },
       comparePricier: function (net, amt, pct) { return "换算约 " + net + "，比本国零售价贵 <b>" + amt + "（" + pct + "%）</b>"; },
       customsWithin: function (net) { return "换算约 " + net + "，未超出你填写的免税额度。"; },
-      customsOver: function (net, taxable, rate, duty) { return "换算约 " + net + "，超出免税额度 <b>" + taxable + "</b>，按 " + rate + "% 估算需缴 <b>" + duty + "</b>。"; }
+      customsOver: function (net, taxable, rate, duty) { return "换算约 " + net + "，超出免税额度 <b>" + taxable + "</b>，按 " + rate + "% 估算需缴 <b>" + duty + "</b>。"; },
+      explainTitle: "欧洲免税退税是怎么运作的？",
+      explainP1: "在多数欧盟国家，非欧盟居民在参与「退税」（Tax Free）计划的商店购物达到最低金额后，可以在离开整个申根/欧盟关境（而不只是离开某一国）时申请退还已支付的增值税。购物时需出示护照，商店会开具一张退税单（Tax Free Form）。",
+      explainP2: "离境时，需要在机场或边境的海关窗口，将退税单、护照、登机牌以及未拆封、未使用的手表原件一并出示给海关盖章确认——很多机场要求在办理托运行李前完成这一步，因为海关有权要求开箱查验商品。盖章后的退税单可以在机场退税代理柜台（如 Global Blue、Planet）直接办理现金或信用卡退款，也可以邮寄回退税公司处理，信用卡退款通常要等几周。",
+      explainP3: "退税公司会从应退的增值税中扣除一笔服务费，所以实际到手的「现金退税比例」通常低于商品标价中包含的增值税全额——这也是为什么本工具区分「增值税率」和「预估实退比例」两个数字。瑞士不属于欧盟，退税流程和门槛不同（通常门槛更低、操作也更简单），但同样需要在离境时办理海关手续。",
+      faqTitle: "常见问题",
+      faq: [
+        { q: "退税单必须在机场盖章吗？可以邮寄办理吗？", a: "原则上必须在离开欧盟前，由海关在退税单上盖章确认（部分机场也提供数字化验证），这是退税生效的前提。之后才能选择现金、信用卡或邮寄退税单的方式领取退款。" },
+        { q: "为什么计算器里的「预估实退比例」比增值税率低很多？", a: "因为退税公司（如 Global Blue、Planet）会从应退税额中扣除服务费，实际到手金额低于商品标价中包含的增值税全额。不同国家、不同退税公司、不同支付方式的实退比例都会有差异，本工具的默认值只是常见区间的粗略参考。" },
+        { q: "在瑞士买表退税和在欧盟国家一样吗？", a: "不一样。瑞士不属于欧盟，有自己独立的增值税退税体系，门槛通常更低、流程也相对简单，但同样需要在离境时办理海关确认手续，具体以瑞士海关和退税代理商当时的规定为准。" },
+        { q: "工具里的「本国关税提醒」是什么意思？", a: "指你把手表带回自己所在国家/地区时，海关可能对超出个人免税额度的部分征收进口税或增值税。每个国家的免税额度和税率都不同，本工具只做粗略的算术估算。" },
+        { q: "这个计算器的结果可以当作最终成交价的依据吗？", a: "不可以。这里的数字只是基于官方增值税率和常见退税比例做的粗略估算，实际退税金额以退税公司出具的结算单为准，实际关税以海关现场核定为准，不构成税务或法律建议。" },
+        { q: "这个工具会保存我输入的价格或个人信息吗？", a: "不会。所有计算都在你的浏览器本地完成，不会发送到任何服务器，也不需要注册或登录。" }
+      ]
     },
     en: {
       locale: "en-US",
@@ -112,7 +125,20 @@
       compareCheaper: function (net, amt, pct) { return "&asymp; " + net + " &mdash; <b>" + amt + " (" + pct + "%)</b> cheaper than the home retail price"; },
       comparePricier: function (net, amt, pct) { return "&asymp; " + net + " &mdash; <b>" + amt + " (" + pct + "%)</b> more expensive than the home retail price"; },
       customsWithin: function (net) { return "&asymp; " + net + " &mdash; within the duty-free allowance you entered."; },
-      customsOver: function (net, taxable, rate, duty) { return "&asymp; " + net + " &mdash; exceeds your allowance by <b>" + taxable + "</b>; at " + rate + "% that's an estimated <b>" + duty + "</b> in duty."; }
+      customsOver: function (net, taxable, rate, duty) { return "&asymp; " + net + " &mdash; exceeds your allowance by <b>" + taxable + "</b>; at " + rate + "% that's an estimated <b>" + duty + "</b> in duty."; },
+      explainTitle: "How does European tax-free shopping actually work?",
+      explainP1: "In most EU countries, non-EU residents shopping at participating \"Tax Free\" stores can reclaim the VAT they paid once they leave the EU (not just the country of purchase, but the entire Schengen/EU customs area) — provided they hit the minimum purchase amount. You show your passport at checkout, and the store issues a Tax Free Form.",
+      explainP2: "When you leave, you need to get that form stamped by customs at the airport or border — along with your passport, boarding pass, and the watch itself, unworn and in its original packaging, since customs can ask to inspect it. Many airports require this before you check in your luggage. Once stamped, you can claim your refund in cash or to a credit card at an on-site refund counter (Global Blue, Planet, etc.), or mail the form back to the operator — card refunds typically take a few weeks.",
+      explainP3: "The refund operator deducts a service fee from the VAT owed, so the actual cash-refund percentage you receive is usually lower than the full VAT rate baked into the sticker price — which is why this tool separates \"VAT rate\" from \"estimated cash-refund rate.\" Switzerland isn't in the EU, so its refund process and thresholds differ (generally a lower minimum and a simpler process), but it still requires a customs stop before you leave the country.",
+      faqTitle: "Frequently Asked Questions",
+      faq: [
+        { q: "Does the Tax Free form have to be stamped at the airport? Can I mail it in instead?", a: "In principle, yes — customs has to stamp (or digitally validate, at airports offering that option) the form before you leave the EU; that stamp is what makes the refund valid. Only after that step can you choose to collect the refund in cash, to a credit card, or by mailing the stamped form back to the refund operator." },
+        { q: "Why is the estimated cash-refund rate so much lower than the VAT rate?", a: "Because refund operators (Global Blue, Planet, etc.) deduct a service fee from the VAT owed, so the amount you actually receive is lower than the full VAT included in the sticker price. The exact rate varies by country, operator, and payment method (cash vs. card) — the defaults here are just a rough reference for common ranges." },
+        { q: "Is buying a watch duty-free in Switzerland the same as in an EU country?", a: "No. Switzerland isn't in the EU and runs its own separate VAT refund scheme — usually with a lower minimum purchase amount and a simpler process — but it still requires a customs check when you leave the country (at the border or airport). Check current rules with Swiss customs and the refund operator directly." },
+        { q: "What does the home-country customs reminder section mean?", a: "It refers to the fact that when you bring the watch back to your home country, customs may charge import duty or VAT on the portion of its value above your personal duty-free allowance. Allowances and rates vary by country — this tool only does a rough arithmetic estimate; check your own customs authority for the current rules." },
+        { q: "Can I treat this calculator's result as the final price I'll actually pay or receive?", a: "No. These figures are a rough estimate based on official VAT rates and typical refund percentages. The actual refund amount is determined by the refund operator's settlement slip, and any home-country duty is determined by customs on the spot. The tool is meant to help you gauge, while planning a trip, whether buying locally is worth it — it's not tax or legal advice." },
+        { q: "Does this tool save the prices or personal info I enter?", a: "No. All calculations run entirely in your browser and are never sent to a server; no sign-up or login is required. Nothing you type is retained after you close the page, aside from your language preference, which is stored locally on your device only." }
+      ]
     },
     de: {
       locale: "de-DE",
@@ -164,7 +190,20 @@
       compareCheaper: function (net, amt, pct) { return "&asymp; " + net + " &mdash; <b>" + amt + " (" + pct + "%)</b> günstiger als der Ladenpreis im Heimatland"; },
       comparePricier: function (net, amt, pct) { return "&asymp; " + net + " &mdash; <b>" + amt + " (" + pct + "%)</b> teurer als der Ladenpreis im Heimatland"; },
       customsWithin: function (net) { return "&asymp; " + net + " &mdash; innerhalb der eingegebenen zollfreien Freimenge."; },
-      customsOver: function (net, taxable, rate, duty) { return "&asymp; " + net + " &mdash; überschreitet die Freimenge um <b>" + taxable + "</b>; bei " + rate + "% ergibt das geschätzt <b>" + duty + "</b> Zoll."; }
+      customsOver: function (net, taxable, rate, duty) { return "&asymp; " + net + " &mdash; überschreitet die Freimenge um <b>" + taxable + "</b>; bei " + rate + "% ergibt das geschätzt <b>" + duty + "</b> Zoll."; },
+      explainTitle: "Wie funktioniert Tax-Free-Shopping in Europa eigentlich?",
+      explainP1: "In den meisten EU-Ländern können Reisende ohne EU-Wohnsitz beim Einkauf in teilnehmenden „Tax Free\"-Geschäften die gezahlte Mehrwertsteuer zurückfordern, sobald sie die EU verlassen — nicht nur das Kaufland, sondern den gesamten Schengen-/EU-Zollraum — vorausgesetzt, der Mindestkaufbetrag wird erreicht. An der Kasse wird der Reisepass gezeigt, das Geschäft stellt ein Tax-Free-Formular aus.",
+      explainP2: "Bei der Ausreise muss dieses Formular am Flughafen oder an der Grenze vom Zoll abgestempelt werden — zusammen mit Reisepass, Bordkarte und der Uhr selbst, ungetragen und original verpackt, da der Zoll das Recht hat, die Ware zu kontrollieren. An vielen Flughäfen muss das vor der Gepäckaufgabe erledigt werden. Nach dem Stempel kann die Erstattung direkt am Rückerstattungsschalter (Global Blue, Planet usw.) bar oder auf Kreditkarte ausgezahlt werden, oder das Formular wird per Post an den Anbieter zurückgeschickt — Kartenerstattungen dauern meist einige Wochen.",
+      explainP3: "Der Rückerstattungsanbieter zieht von der geschuldeten Mehrwertsteuer eine Bearbeitungsgebühr ab, weshalb die tatsächliche Bar-Erstattungsquote meist niedriger ausfällt als der volle im Ladenpreis enthaltene MwSt.-Satz — deshalb unterscheidet dieses Tool zwischen „MwSt.-Satz\" und „geschätzter Bar-Erstattungsquote\". Die Schweiz gehört nicht zur EU, daher unterscheiden sich Ablauf und Schwellenwerte (meist niedrigerer Mindestbetrag, einfacherer Ablauf), aber auch hier ist bei der Ausreise ein Zollschritt nötig.",
+      faqTitle: "Häufig gestellte Fragen",
+      faq: [
+        { q: "Muss das Tax-Free-Formular am Flughafen gestempelt werden? Geht das auch per Post?", a: "Grundsätzlich ja — der Zoll muss das Formular vor der Ausreise aus der EU abstempeln (an manchen Flughäfen auch digital validieren); erst dieser Stempel macht die Erstattung gültig. Danach kann die Erstattung bar, per Kreditkarte oder durch Rücksendung des gestempelten Formulars an den Anbieter erfolgen." },
+        { q: "Warum ist die „geschätzte Bar-Erstattungsquote\" viel niedriger als der MwSt.-Satz?", a: "Weil Rückerstattungsanbieter (Global Blue, Planet usw.) von der geschuldeten Mehrwertsteuer eine Bearbeitungsgebühr abziehen. Der tatsächlich ausgezahlte Betrag liegt daher unter der vollen im Ladenpreis enthaltenen MwSt. Die genaue Quote hängt von Land, Anbieter und Zahlungsart ab." },
+        { q: "Ist der zollfreie Uhrenkauf in der Schweiz dasselbe wie in einem EU-Land?", a: "Nein. Die Schweiz gehört nicht zur EU und hat ein eigenes MwSt.-Rückerstattungssystem — meist mit niedrigerem Mindestbetrag und einfacherem Ablauf —, erfordert aber ebenfalls eine Zollkontrolle bei der Ausreise. Aktuelle Regeln bitte direkt beim Schweizer Zoll und dem Rückerstattungsanbieter prüfen." },
+        { q: "Was bedeutet der Abschnitt „Zollhinweis bei der Einreise\"?", a: "Damit ist gemeint, dass der Zoll beim Wiedereinreisen ins Heimatland auf den Wertanteil oberhalb der persönlichen zollfreien Freimenge Einfuhrabgaben oder MwSt. erheben kann. Freimengen und Sätze unterscheiden sich je nach Land — dieses Tool liefert nur eine grobe rechnerische Schätzung." },
+        { q: "Kann ich das Ergebnis dieses Rechners als verbindlichen Endpreis ansehen?", a: "Nein. Die Zahlen sind eine grobe Schätzung auf Basis offizieller MwSt.-Sätze und üblicher Erstattungsquoten. Der tatsächliche Erstattungsbetrag ergibt sich aus der Abrechnung des Anbieters, die tatsächliche Zollabgabe wird vor Ort vom Zoll festgelegt — keine Steuer- oder Rechtsberatung." },
+        { q: "Speichert dieses Tool die eingegebenen Preise oder persönliche Daten?", a: "Nein. Alle Berechnungen laufen vollständig in deinem Browser ab und werden nie an einen Server gesendet; es ist keine Anmeldung nötig." }
+      ]
     }
   };
 
@@ -180,8 +219,30 @@
     "txt-customsSummary": "customsSummary", "txt-customsIntro": "customsIntro",
     "txt-labelAllowance": "labelAllowance", "txt-labelDutyRate": "labelDutyRate",
     "txt-customsNote": "customsNote", "txt-footer1": "footer1", "txt-footer2": "footer2",
-    "txt-ad-top": "adLabel", "txt-ad-in": "adLabel", "txt-ad-bottom": "adLabel"
+    "txt-ad-top": "adLabel", "txt-ad-in": "adLabel", "txt-ad-bottom": "adLabel",
+    "txt-explainTitle": "explainTitle", "txt-explainP1": "explainP1",
+    "txt-explainP2": "explainP2", "txt-explainP3": "explainP3", "txt-faqTitle": "faqTitle"
   };
+
+  var faqListEl = document.getElementById("faqList");
+
+  function renderFAQ() {
+    if (!faqListEl) return;
+    var t = I18N[currentLang];
+    faqListEl.innerHTML = "";
+    (t.faq || []).forEach(function (item) {
+      var details = document.createElement("details");
+      details.className = "faq-item";
+      var summary = document.createElement("summary");
+      summary.innerHTML = '<span class="chev">▶</span> <span>' + item.q + "</span>";
+      var body = document.createElement("div");
+      body.className = "faq-a";
+      body.textContent = item.a;
+      details.appendChild(summary);
+      details.appendChild(body);
+      faqListEl.appendChild(details);
+    });
+  }
 
   var countrySel = document.getElementById("country");
   var vatRateEl = document.getElementById("vatRate");
@@ -252,6 +313,7 @@
       homeCurrencyEl.value = t.homeCurrencyDefault;
     }
     langInitialized[currentLang] = true;
+    renderFAQ();
     fitTitleFont();
   }
 

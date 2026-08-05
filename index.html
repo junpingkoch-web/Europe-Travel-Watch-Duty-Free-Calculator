@@ -9,6 +9,45 @@
 <link rel="canonical" href="https://junpingkoch-web.github.io/Europe-Travel-Watch-Duty-Free-Calculator/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%8C%9A%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
+<!-- Structured data: FAQPage (English defaults; keep in sync with the "en" faq array in script.js) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does the Tax Free form have to be stamped at the airport? Can I mail it in instead?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In principle, yes — customs has to stamp (or digitally validate, at airports offering that option) the form before you leave the EU; that stamp is what makes the refund valid. Only after that step can you choose to collect the refund in cash, to a credit card, or by mailing the stamped form back to the refund operator." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the estimated cash-refund rate so much lower than the VAT rate?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Because refund operators (Global Blue, Planet, etc.) deduct a service fee from the VAT owed, so the amount you actually receive is lower than the full VAT included in the sticker price. The exact rate varies by country, operator, and payment method." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is buying a watch duty-free in Switzerland the same as in an EU country?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Switzerland isn't in the EU and runs its own separate VAT refund scheme, usually with a lower minimum purchase amount and a simpler process, but it still requires a customs check when you leave the country." }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the home-country customs reminder section mean?",
+      "acceptedAnswer": { "@type": "Answer", "text": "When you bring the watch back to your home country, customs may charge import duty or VAT on the portion of its value above your personal duty-free allowance. Allowances and rates vary by country." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I treat this calculator's result as the final price I'll actually pay or receive?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. These figures are a rough estimate based on official VAT rates and typical refund percentages. The actual refund amount is determined by the refund operator's settlement slip, and any home-country duty is determined by customs on the spot." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this tool save the prices or personal info I enter?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. All calculations run entirely in your browser and are never sent to a server; no sign-up or login is required." }
+    }
+  ]
+}
+</script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -192,6 +231,16 @@
     </div>
   </div>
 
+  <section class="explain-section">
+    <h2 id="txt-explainTitle">How does European tax-free shopping actually work?</h2>
+    <p id="txt-explainP1"></p>
+    <p id="txt-explainP2"></p>
+    <p id="txt-explainP3"></p>
+
+    <h2 id="txt-faqTitle">Frequently Asked Questions</h2>
+    <div class="faq-list" id="faqList"></div>
+  </section>
+
   <div class="ad-slot ad-slot--banner ad-slot--bottom">
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4830421367394194" data-ad-slot="9823302082" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
@@ -200,6 +249,12 @@
   <footer>
     <span id="txt-footer1">Refund share varies by category, operator fee, and payment method.</span><br>
     <span id="txt-footer2">For trip-budgeting reference only — not tax or legal advice.</span>
+    <nav class="footer-links">
+      <a href="https://junpingkoch-web.github.io/about.html">About · Über mich · 关于</a>
+      <a href="https://junpingkoch-web.github.io/contact.html">Contact · Kontakt · 联系</a>
+      <a href="https://junpingkoch-web.github.io/privacy.html">Privacy · Datenschutz · 隐私</a>
+      <a href="https://junpingkoch-web.github.io/terms.html">Terms · Bedingungen · 条款</a>
+    </nav>
   </footer>
 </div>
 

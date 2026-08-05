@@ -599,6 +599,78 @@ footer {
   text-align: center;
 }
 
+/* Explainer + FAQ section */
+.explain-section {
+  margin-top: 22px;
+  padding: 26px 28px 28px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+.explain-section h2 {
+  font-family: ui-serif, Georgia, serif;
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin: 0 0 10px;
+  color: var(--ink);
+}
+.explain-section h2:not(:first-child) { margin-top: 22px; }
+.explain-section p {
+  font-size: 0.86rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+.explain-section p:last-child { margin-bottom: 0; }
+
+.faq-list { margin-top: 4px; }
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-2);
+  margin-bottom: 8px;
+}
+.faq-item summary {
+  cursor: pointer;
+  padding: 12px 16px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+  list-style: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary .chev {
+  transition: transform 0.15s ease;
+  color: var(--ink-faint);
+  font-size: 0.75rem;
+}
+.faq-item[open] summary .chev { transform: rotate(90deg); }
+.faq-item .faq-a {
+  padding: 0 16px 14px;
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+
+/* Footer trust-page links */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 16px;
+  font-size: 0.76rem;
+}
+.footer-links a {
+  color: var(--ink-faint);
+  text-decoration: none;
+}
+.footer-links a:hover { color: var(--ink); text-decoration: underline; }
+
 /* Ad slots — dashed placeholders until the real AdSense <ins> unit is dropped in */
 .ad-slot {
   display: flex;
