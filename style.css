@@ -624,6 +624,20 @@ footer {
 }
 .explain-section p:last-child { margin-bottom: 0; }
 
+.example-steps {
+  margin: 4px 0 14px;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+  font-size: 0.86rem;
+  color: var(--ink-muted);
+}
+.example-steps li b {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+
 .faq-list { margin-top: 4px; }
 .faq-item {
   border: 1px solid var(--line);

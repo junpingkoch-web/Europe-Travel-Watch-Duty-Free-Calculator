@@ -65,6 +65,14 @@
       explainP1: "在多数欧盟国家，非欧盟居民在参与「退税」（Tax Free）计划的商店购物达到最低金额后，可以在离开整个申根/欧盟关境（而不只是离开某一国）时申请退还已支付的增值税。购物时需出示护照，商店会开具一张退税单（Tax Free Form）。",
       explainP2: "离境时，需要在机场或边境的海关窗口，将退税单、护照、登机牌以及未拆封、未使用的手表原件一并出示给海关盖章确认——很多机场要求在办理托运行李前完成这一步，因为海关有权要求开箱查验商品。盖章后的退税单可以在机场退税代理柜台（如 Global Blue、Planet）直接办理现金或信用卡退款，也可以邮寄回退税公司处理，信用卡退款通常要等几周。",
       explainP3: "退税公司会从应退的增值税中扣除一笔服务费，所以实际到手的「现金退税比例」通常低于商品标价中包含的增值税全额——这也是为什么本工具区分「增值税率」和「预估实退比例」两个数字。瑞士不属于欧盟，退税流程和门槛不同（通常门槛更低、操作也更简单），但同样需要在离境时办理海关手续。",
+      exampleTitle: "算一笔具体的账",
+      exampleSteps: [
+        "举个例子：假设你在巴黎一家精品店看中一块标价 <b>€8,500</b> 的手表（含20%法国增值税），这家店支持退税，预估现金退税比例约 <b>12%</b>。",
+        "含税标价中的增值税额：€8,500 − €8,500 ÷ 1.20 ≈ <b>€1,417</b>",
+        "预计现金退税：€8,500 × 12% ≈ <b>€1,020</b>",
+        "退税后到手价：约 <b>€7,480</b>"
+      ],
+      exampleNote: "假设你所在地的零售价约为 CNY 78,000，按当日汇率 1 EUR ≈ 7.85 CNY 折算，€7,480 ≈ CNY 58,720——比本国零售价省下将近 CNY 19,280（约25%）。但如果你带着这块表回国，价值超过个人免税额度的部分，可能还需要缴纳本国的进口关税——省下的退税金额，不等于你最终实际到手的净节省，这也是为什么本工具专门加了「本国关税提醒」这一步。",
       faqTitle: "常见问题",
       faq: [
         { q: "退税单必须在机场盖章吗？可以邮寄办理吗？", a: "原则上必须在离开欧盟前，由海关在退税单上盖章确认（部分机场也提供数字化验证），这是退税生效的前提。之后才能选择现金、信用卡或邮寄退税单的方式领取退款。" },
@@ -130,6 +138,14 @@
       explainP1: "In most EU countries, non-EU residents shopping at participating \"Tax Free\" stores can reclaim the VAT they paid once they leave the EU (not just the country of purchase, but the entire Schengen/EU customs area) — provided they hit the minimum purchase amount. You show your passport at checkout, and the store issues a Tax Free Form.",
       explainP2: "When you leave, you need to get that form stamped by customs at the airport or border — along with your passport, boarding pass, and the watch itself, unworn and in its original packaging, since customs can ask to inspect it. Many airports require this before you check in your luggage. Once stamped, you can claim your refund in cash or to a credit card at an on-site refund counter (Global Blue, Planet, etc.), or mail the form back to the operator — card refunds typically take a few weeks.",
       explainP3: "The refund operator deducts a service fee from the VAT owed, so the actual cash-refund percentage you receive is usually lower than the full VAT rate baked into the sticker price — which is why this tool separates \"VAT rate\" from \"estimated cash-refund rate.\" Switzerland isn't in the EU, so its refund process and thresholds differ (generally a lower minimum and a simpler process), but it still requires a customs stop before you leave the country.",
+      exampleTitle: "A worked example",
+      exampleSteps: [
+        "Say you spot a watch tagged at <b>€8,500</b> at a boutique in Paris (including 20% French VAT), and the store participates in tax-free shopping with an estimated cash-refund rate of about <b>12%</b>.",
+        "VAT included in the tag price: €8,500 − €8,500 ÷ 1.20 ≈ <b>€1,417</b>",
+        "Estimated cash refund: €8,500 × 12% ≈ <b>€1,020</b>",
+        "Net price after refund: about <b>€7,480</b>"
+      ],
+      exampleNote: "If the retail price back home is roughly $11,000, and today's rate is about 1 EUR ≈ 1.08 USD, €7,480 ≈ $8,078 — around $2,922 (roughly 27%) cheaper than buying at home. But if you bring the watch home and its value exceeds your personal duty-free allowance, you may still owe import duty on the difference — the refund you got in Europe isn't automatically your final net savings, which is exactly why this tool has a separate \"home-country customs reminder\" step.",
       faqTitle: "Frequently Asked Questions",
       faq: [
         { q: "Does the Tax Free form have to be stamped at the airport? Can I mail it in instead?", a: "In principle, yes — customs has to stamp (or digitally validate, at airports offering that option) the form before you leave the EU; that stamp is what makes the refund valid. Only after that step can you choose to collect the refund in cash, to a credit card, or by mailing the stamped form back to the refund operator." },
@@ -195,6 +211,14 @@
       explainP1: "In den meisten EU-Ländern können Reisende ohne EU-Wohnsitz beim Einkauf in teilnehmenden „Tax Free\"-Geschäften die gezahlte Mehrwertsteuer zurückfordern, sobald sie die EU verlassen — nicht nur das Kaufland, sondern den gesamten Schengen-/EU-Zollraum — vorausgesetzt, der Mindestkaufbetrag wird erreicht. An der Kasse wird der Reisepass gezeigt, das Geschäft stellt ein Tax-Free-Formular aus.",
       explainP2: "Bei der Ausreise muss dieses Formular am Flughafen oder an der Grenze vom Zoll abgestempelt werden — zusammen mit Reisepass, Bordkarte und der Uhr selbst, ungetragen und original verpackt, da der Zoll das Recht hat, die Ware zu kontrollieren. An vielen Flughäfen muss das vor der Gepäckaufgabe erledigt werden. Nach dem Stempel kann die Erstattung direkt am Rückerstattungsschalter (Global Blue, Planet usw.) bar oder auf Kreditkarte ausgezahlt werden, oder das Formular wird per Post an den Anbieter zurückgeschickt — Kartenerstattungen dauern meist einige Wochen.",
       explainP3: "Der Rückerstattungsanbieter zieht von der geschuldeten Mehrwertsteuer eine Bearbeitungsgebühr ab, weshalb die tatsächliche Bar-Erstattungsquote meist niedriger ausfällt als der volle im Ladenpreis enthaltene MwSt.-Satz — deshalb unterscheidet dieses Tool zwischen „MwSt.-Satz\" und „geschätzter Bar-Erstattungsquote\". Die Schweiz gehört nicht zur EU, daher unterscheiden sich Ablauf und Schwellenwerte (meist niedrigerer Mindestbetrag, einfacherer Ablauf), aber auch hier ist bei der Ausreise ein Zollschritt nötig.",
+      exampleTitle: "Ein Rechenbeispiel",
+      exampleSteps: [
+        "Angenommen, du entdeckst in einer Boutique in Paris eine Uhr mit einem Preisschild von <b>8.500 €</b> (inklusive 20% französischer MwSt.), und das Geschäft nimmt am Tax-Free-Programm teil, mit einer geschätzten Bar-Erstattungsquote von etwa <b>12%</b>.",
+        "Im Preis enthaltene MwSt.: 8.500 € − 8.500 € ÷ 1,20 ≈ <b>1.417 €</b>",
+        "Geschätzte Bar-Erstattung: 8.500 € × 12% ≈ <b>1.020 €</b>",
+        "Endpreis nach Erstattung: etwa <b>7.480 €</b>"
+      ],
+      exampleNote: "Angenommen, der Ladenpreis zu Hause liegt bei rund 9.500 CHF, und der aktuelle Kurs beträgt etwa 1 EUR ≈ 0,95 CHF, dann entspricht 7.480 € rund 7.106 CHF — etwa 2.394 CHF (rund 25%) günstiger als der Kauf zu Hause. Bringst du die Uhr aber mit nach Hause und ihr Wert übersteigt deine persönliche zollfreie Freimenge, kann trotzdem Einfuhrzoll auf die Differenz anfallen — die in Europa erhaltene Erstattung ist nicht automatisch deine tatsächliche Nettoersparnis. Genau deshalb gibt es in diesem Tool den separaten Schritt „Zollhinweis bei der Einreise\".",
       faqTitle: "Häufig gestellte Fragen",
       faq: [
         { q: "Muss das Tax-Free-Formular am Flughafen gestempelt werden? Geht das auch per Post?", a: "Grundsätzlich ja — der Zoll muss das Formular vor der Ausreise aus der EU abstempeln (an manchen Flughäfen auch digital validieren); erst dieser Stempel macht die Erstattung gültig. Danach kann die Erstattung bar, per Kreditkarte oder durch Rücksendung des gestempelten Formulars an den Anbieter erfolgen." },
@@ -221,8 +245,22 @@
     "txt-customsNote": "customsNote", "txt-footer1": "footer1", "txt-footer2": "footer2",
     "txt-ad-top": "adLabel", "txt-ad-in": "adLabel", "txt-ad-bottom": "adLabel",
     "txt-explainTitle": "explainTitle", "txt-explainP1": "explainP1",
-    "txt-explainP2": "explainP2", "txt-explainP3": "explainP3", "txt-faqTitle": "faqTitle"
+    "txt-explainP2": "explainP2", "txt-explainP3": "explainP3", "txt-faqTitle": "faqTitle",
+    "txt-exampleTitle": "exampleTitle", "txt-exampleNote": "exampleNote"
   };
+
+  var exampleStepsEl = document.getElementById("exampleSteps");
+
+  function renderExample() {
+    if (!exampleStepsEl) return;
+    var steps = I18N[currentLang].exampleSteps || [];
+    exampleStepsEl.innerHTML = "";
+    steps.forEach(function (step) {
+      var li = document.createElement("li");
+      li.innerHTML = step;
+      exampleStepsEl.appendChild(li);
+    });
+  }
 
   var faqListEl = document.getElementById("faqList");
 
@@ -313,6 +351,7 @@
       homeCurrencyEl.value = t.homeCurrencyDefault;
     }
     langInitialized[currentLang] = true;
+    renderExample();
     renderFAQ();
     fitTitleFont();
   }
