@@ -256,6 +256,19 @@ h1 {
   transform: translateY(1px) scale(0.97);
 }
 
+.top-notes {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.top-note--meta {
+  opacity: 0.75;
+  font-size: 0.7rem;
+}
+
 .top-note {
   font-size: 0.76rem;
   color: var(--ink-faint);

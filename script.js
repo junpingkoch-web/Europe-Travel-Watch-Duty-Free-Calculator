@@ -1,4 +1,14 @@
 (function () {
+  /*
+   * Manual check-in (2026-08-18): re-verified all five countries' standard
+   * VAT rates and typical Global Blue/Planet cash-refund shares against
+   * current official/public sources — all unchanged from the prior figures
+   * (France 20%, Italy 22%, Germany 19%, Switzerland 8.1% since its Jan
+   * 2024 increase, Spain 21%; UK VAT Retail Export Scheme remains abolished
+   * post-Brexit, no reinstatement announced). No numbers needed correcting
+   * this pass — logged the check date via LAST_UPDATED below so the page
+   * discloses recency either way, not just when something changes.
+   */
   var COUNTRY_FACTS = [
     { id: "fr",   currency: "EUR", vat: 20,  refund: 12 },
     { id: "it",   currency: "EUR", vat: 22,  refund: 13 },
@@ -9,12 +19,15 @@
     { id: "custom", currency: "EUR", vat: 20, refund: 12 }
   ];
 
+  var LAST_UPDATED = "2026-08-18";
+
   var I18N = {
     zh: {
       locale: "zh-CN",
       kicker: "欧洲 · 购表指南",
       title: "欧洲旅行手表免税计算器",
       topNote: "按各国官方增值税率与常见实退比例估算，实际以退税公司（Global Blue / Planet 等）核算单为准。",
+      lastUpdatedLabel: "税率与实退比例核对于",
       leftTitle: "购买信息",
       leftSub: "选择购表国家，自动带入税率与预估实退比例",
       labelCountry: "购买国家 / 地区",
@@ -88,6 +101,7 @@
       kicker: "EUROPE · WATCH PURCHASE",
       title: "Europe Travel Watch Duty-Free Calculator",
       topNote: "Estimated from each country's official VAT rate and typical cash-refund share; your actual payout depends on the refund operator's (Global Blue, Planet, etc.) settlement slip.",
+      lastUpdatedLabel: "VAT / refund rates last checked",
       leftTitle: "Purchase Details",
       leftSub: "Pick the country of purchase to auto-fill the VAT and estimated refund rate",
       labelCountry: "Country of purchase",
@@ -161,6 +175,7 @@
       kicker: "EUROPA · UHRENKAUF",
       title: "Europa-Reise Uhren-Steuerfrei-Rechner",
       topNote: "Geschätzt anhand des offiziellen Mehrwertsteuersatzes und der üblichen Bar-Erstattungsquote; der tatsächliche Betrag hängt von der Abrechnung des Anbieters (Global Blue, Planet usw.) ab.",
+      lastUpdatedLabel: "MwSt.-/Erstattungssätze zuletzt geprüft am",
       leftTitle: "Kaufdetails",
       leftSub: "Kaufland auswählen, um MwSt.-Satz und Erstattungsquote automatisch zu übernehmen",
       labelCountry: "Kaufland",
@@ -232,7 +247,7 @@
   };
 
   var STATIC_MAP = {
-    "txt-kicker": "kicker", "txt-title": "title", "txt-topnote": "topNote",
+    "txt-kicker": "kicker", "txt-title": "title", "txt-topnote": "topNote", "txt-lastUpdatedLabel": "lastUpdatedLabel",
     "txt-leftTitle": "leftTitle", "txt-leftSub": "leftSub",
     "txt-labelCountry": "labelCountry", "txt-labelVat": "labelVat", "txt-labelRefund": "labelRefund",
     "txt-labelPrice": "labelPrice", "txt-rightTitle": "rightTitle", "txt-rightSub": "rightSub",
@@ -340,6 +355,8 @@
       var el = document.getElementById(elId);
       if (el) el.textContent = t[STATIC_MAP[elId]];
     });
+    var lastUpdatedEl = document.getElementById("lastUpdatedValue");
+    if (lastUpdatedEl) lastUpdatedEl.textContent = LAST_UPDATED;
     priceEl.placeholder = t.pricePlaceholder;
     fxRateEl.placeholder = t.fxPlaceholder;
     homePriceEl.placeholder = t.homePricePlaceholder;
