@@ -327,7 +327,7 @@
   var titleWrapEl = document.getElementById("titleWrap");
 
   var CIRC = 2 * Math.PI * 42;
-  var currentLang = "en";
+  var currentLang = "de";
   var langInitialized = { zh: false, en: false, de: false };
 
   function fmt(n, curr) {
