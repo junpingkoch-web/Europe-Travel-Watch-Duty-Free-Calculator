@@ -261,17 +261,47 @@
   </div>
 
   <section class="explain-section">
-    <h2 id="txt-explainTitle">How does European tax-free shopping actually work?</h2>
-    <p id="txt-explainP1"></p>
-    <p id="txt-explainP2"></p>
-    <p id="txt-explainP3"></p>
+    <h2 id="txt-explainTitle">欧洲免税退税是怎么运作的？</h2>
+    <p id="txt-explainP1">在多数欧盟国家，非欧盟居民在参与「退税」（Tax Free）计划的商店购物达到最低金额后，可以在离开整个申根/欧盟关境（而不只是离开某一国）时申请退还已支付的增值税。购物时需出示护照，商店会开具一张退税单（Tax Free Form）。</p>
+    <p id="txt-explainP2">离境时，需要在机场或边境的海关窗口，将退税单、护照、登机牌以及未拆封、未使用的手表原件一并出示给海关盖章确认——很多机场要求在办理托运行李前完成这一步，因为海关有权要求开箱查验商品。盖章后的退税单可以在机场退税代理柜台（如 Global Blue、Planet）直接办理现金或信用卡退款，也可以邮寄回退税公司处理，信用卡退款通常要等几周。</p>
+    <p id="txt-explainP3">退税公司会从应退的增值税中扣除一笔服务费，所以实际到手的「现金退税比例」通常低于商品标价中包含的增值税全额——这也是为什么本工具区分「增值税率」和「预估实退比例」两个数字。瑞士不属于欧盟，退税流程和门槛不同（通常门槛更低、操作也更简单），但同样需要在离境时办理海关手续。</p>
 
-    <h2 id="txt-exampleTitle">A worked example</h2>
-    <ol class="example-steps" id="exampleSteps"></ol>
-    <p id="txt-exampleNote"></p>
+    <h2 id="txt-exampleTitle">算一笔具体的账</h2>
+    <ol class="example-steps" id="exampleSteps">
+      <li>举个例子：假设你在巴黎一家精品店看中一块标价 <b>€8,500</b> 的手表（含20%法国增值税），这家店支持退税，预估现金退税比例约 <b>12%</b>。</li>
+      <li>含税标价中的增值税额：€8,500 − €8,500 ÷ 1.20 ≈ <b>€1,417</b></li>
+      <li>预计现金退税：€8,500 × 12% ≈ <b>€1,020</b></li>
+      <li>退税后到手价：约 <b>€7,480</b></li>
+    </ol>
+    <p id="txt-exampleNote">假设你所在地的零售价约为 CNY 78,000，按当日汇率 1 EUR ≈ 7.85 CNY 折算，€7,480 ≈ CNY 58,720——比本国零售价省下将近 CNY 19,280（约25%）。但如果你带着这块表回国，价值超过个人免税额度的部分，可能还需要缴纳本国的进口关税——省下的退税金额，不等于你最终实际到手的净节省，这也是为什么本工具专门加了「本国关税提醒」这一步。</p>
 
-    <h2 id="txt-faqTitle">Frequently Asked Questions</h2>
-    <div class="faq-list" id="faqList"></div>
+    <h2 id="txt-faqTitle">常见问题</h2>
+    <div class="faq-list" id="faqList">
+      <details class="faq-item">
+        <summary><span class="chev">▶</span> <span>退税单必须在机场盖章吗？可以邮寄办理吗？</span></summary>
+        <div class="faq-a">原则上必须在离开欧盟前，由海关在退税单上盖章确认（部分机场也提供数字化验证），这是退税生效的前提。之后才能选择现金、信用卡或邮寄退税单的方式领取退款。</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="chev">▶</span> <span>为什么计算器里的「预估实退比例」比增值税率低很多？</span></summary>
+        <div class="faq-a">因为退税公司（如 Global Blue、Planet）会从应退税额中扣除服务费，实际到手金额低于商品标价中包含的增值税全额。不同国家、不同退税公司、不同支付方式的实退比例都会有差异，本工具的默认值只是常见区间的粗略参考。</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="chev">▶</span> <span>在瑞士买表退税和在欧盟国家一样吗？</span></summary>
+        <div class="faq-a">不一样。瑞士不属于欧盟，有自己独立的增值税退税体系，门槛通常更低、流程也相对简单，但同样需要在离境时办理海关确认手续，具体以瑞士海关和退税代理商当时的规定为准。</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="chev">▶</span> <span>工具里的「本国关税提醒」是什么意思？</span></summary>
+        <div class="faq-a">指你把手表带回自己所在国家/地区时，海关可能对超出个人免税额度的部分征收进口税或增值税。每个国家的免税额度和税率都不同，本工具只做粗略的算术估算。</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="chev">▶</span> <span>这个计算器的结果可以当作最终成交价的依据吗？</span></summary>
+        <div class="faq-a">不可以。这里的数字只是基于官方增值税率和常见退税比例做的粗略估算，实际退税金额以退税公司出具的结算单为准，实际关税以海关现场核定为准，不构成税务或法律建议。</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="chev">▶</span> <span>这个工具会保存我输入的价格或个人信息吗？</span></summary>
+        <div class="faq-a">不会。所有计算都在你的浏览器本地完成，不会发送到任何服务器，也不需要注册或登录。</div>
+      </details>
+    </div>
   </section>
 
   <div class="ad-slot ad-slot--banner ad-slot--bottom">
