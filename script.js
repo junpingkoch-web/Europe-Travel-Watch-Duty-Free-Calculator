@@ -413,8 +413,13 @@
     applyThreshold();
   }
 
+  var resultEventFired = false;
   function calc() {
     var price = parseFloat(priceEl.value) || 0;
+    if (price > 0 && !resultEventFired) {
+      resultEventFired = true;
+      if (typeof gtag === "function") gtag("event", "tool_result_generated", { tool_name: "europe-travel-watch-duty-free-calculator" });
+    }
     var vatRate = parseFloat(vatRateEl.value) || 0;
     var refundRate = parseFloat(refundRateEl.value) || 0;
     var curr = currencyLabel.textContent;
