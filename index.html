@@ -126,9 +126,9 @@
         <p class="top-note top-note--meta"><span id="txt-lastUpdatedLabel">VAT / refund rates last checked</span> <span id="lastUpdatedValue"></span></p>
       </div>
       <div class="lang-switch" role="group" aria-label="Language / 语言 / Sprache">
-        <button type="button" data-lang="zh">中文</button>
-        <button type="button" data-lang="en">EN</button>
-        <button type="button" data-lang="de">DE</button>
+        <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="de" aria-pressed="false">DE</button>
       </div>
     </div>
   </header>
@@ -188,7 +188,7 @@
               <span id="txt-gaugeCaption">Saved</span>
             </div>
           </div>
-          <div class="result-hero-text">
+          <div class="result-hero-text" aria-live="polite" aria-atomic="true">
             <div class="label" id="txt-netLabel">Net price after refund</div>
             <div class="value" id="netPrice">—</div>
           </div>
@@ -233,7 +233,7 @@
         </div>
       </div>
 
-      <div class="compare-result" id="compareResult">
+      <div class="compare-result" id="compareResult" aria-live="polite">
         <div class="compare-banner" id="compareBanner">
           <span class="cb-text" id="compareText">—</span>
         </div>
@@ -253,7 +253,7 @@
               <div class="unit-suffix"><input id="dutyRate" type="number" step="1"><span>%</span></div>
             </div>
           </div>
-          <div class="customs-out" id="customsOut"></div>
+          <div class="customs-out" id="customsOut" aria-live="polite"></div>
           <div class="customs-note" id="txt-customsNote">This is a rough estimate only, not tax advice.</div>
         </div>
       </details>

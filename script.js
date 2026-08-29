@@ -490,7 +490,9 @@
   function setLang(lang) {
     currentLang = lang;
     document.querySelectorAll(".lang-switch button").forEach(function (btn) {
-      btn.classList.toggle("active", btn.dataset.lang === lang);
+      var isActive = btn.dataset.lang === lang;
+      btn.classList.toggle("active", isActive);
+      btn.setAttribute("aria-pressed", String(isActive));
     });
     populateCountries();
     applyStaticText();

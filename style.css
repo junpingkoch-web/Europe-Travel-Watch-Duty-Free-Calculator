@@ -4,7 +4,7 @@
   --surface-2: #f5f6f6;
   --ink: #1a1e24;
   --ink-muted: #5b6472;
-  --ink-faint: #8b93a0;
+  --ink-faint: #626b77;
   --accent-gold: #9c6f2c;
   --accent-gold-soft: #e9dcc0;
   --accent-blue: #2f5f8a;
@@ -111,7 +111,7 @@
   --surface-2: #f5f6f6;
   --ink: #1a1e24;
   --ink-muted: #5b6472;
-  --ink-faint: #8b93a0;
+  --ink-faint: #626b77;
   --accent-gold: #9c6f2c;
   --accent-gold-soft: #e9dcc0;
   --accent-blue: #2f5f8a;
@@ -236,7 +236,8 @@ h1 {
   font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.02em;
-  padding: 6px 13px;
+  padding: 12px 16px;
+  min-height: 44px;
   border-radius: 999px;
   cursor: pointer;
   font-family: inherit;
@@ -377,6 +378,7 @@ h1 {
 select, input[type="number"], input[type="text"] {
   width: 100%;
   padding: 9px 11px;
+  min-height: 44px;
   border-radius: 8px;
   border: 1px solid var(--line-strong);
   background: var(--surface-2);
@@ -385,6 +387,7 @@ select, input[type="number"], input[type="text"] {
   font-family: inherit;
   transition: border-color 0.15s ease;
   min-width: 0;
+  box-sizing: border-box;
 }
 
 input[type="number"] {
@@ -448,7 +451,10 @@ select:focus, input:focus {
   height: 92px;
 }
 
-.gauge svg { transform: rotate(-90deg); }
+/* the <svg> in index.html carries width/height="92" HTML attributes, which
+   otherwise override .gauge's own CSS size and stop it shrinking with the
+   container at the narrow-viewport breakpoint below */
+.gauge svg { width: 100%; height: 100%; transform: rotate(-90deg); }
 
 .gauge-track { fill: none; stroke: var(--line); stroke-width: 8; }
 .gauge-value {
@@ -492,6 +498,17 @@ select:focus, input:focus {
   color: var(--good);
   font-weight: 600;
   word-break: break-word;
+}
+
+/* On narrow phones the fixed 92px gauge + gap leaves too little room for a
+   larger price (e.g. a five-figure watch price) to fit on one line next to
+   it — word-break:break-word above prevents a hard overflow but still
+   breaks mid-number. Wrapping the value onto its own line, and shrinking
+   the gauge a bit, keeps the number intact instead. */
+@media (max-width: 480px) {
+  .result-hero { flex-wrap: wrap; }
+  .gauge { width: 72px; height: 72px; }
+  .result-hero-text .value { font-size: 1.15rem; }
 }
 
 .line-item {
@@ -695,6 +712,9 @@ footer {
 .footer-links a {
   color: var(--ink-faint);
   text-decoration: none;
+  padding: 13px 6px;
+  display: inline-block;
+  white-space: nowrap;
 }
 .footer-links a:hover { color: var(--ink); text-decoration: underline; }
 
