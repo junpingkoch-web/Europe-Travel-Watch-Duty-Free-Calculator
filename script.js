@@ -8,6 +8,14 @@
    * post-Brexit, no reinstatement announced). No numbers needed correcting
    * this pass — logged the check date via LAST_UPDATED below so the page
    * discloses recency either way, not just when something changes.
+   *
+   * Monthly re-check (2026-09-07): all five rates still unchanged, no
+   * edits needed. WATCH ITEM: Swiss parliament approved (19 Jun 2026) a
+   * VAT hike from 8.1% to 8.5% to fund the 13th-month pension reform, but
+   * it requires a mandatory constitutional referendum expected Nov 2026
+   * and would only take effect 1 Jan 2028 if passed — not yet in force,
+   * ch.vat stays 8.1 until then. Revisit after the Nov 2026 referendum
+   * result (and again well before Jan 2028 if it passes).
    */
   var COUNTRY_FACTS = [
     { id: "fr",   currency: "EUR", vat: 20,  refund: 12 },
@@ -19,7 +27,7 @@
     { id: "custom", currency: "EUR", vat: 20, refund: 12 }
   ];
 
-  var LAST_UPDATED = "2026-08-18";
+  var LAST_UPDATED = "2026-09-07";
 
   var I18N = {
     zh: {
